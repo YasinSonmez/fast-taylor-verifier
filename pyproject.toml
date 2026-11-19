@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fast-taylor-verifier"
+version = "0.1.0"
+description = "Taylor-model bounds on batches of boxes in PyTorch and CUDA, and a branch and bound over boxes"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.10"
+dependencies = ["torch", "ninja"]
+keywords = ["taylor models", "verification", "interval arithmetic", "branch and bound", "neural networks", "cuda",
+            "pytorch"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: POSIX :: Linux",
+    "Environment :: GPU :: NVIDIA CUDA",
+    "Topic :: Scientific/Engineering :: Mathematics",
+]
+
+[project.urls]
+Repository = "https://github.com/YasinSonmez/fast-taylor-verifier"
+"Paper code" = "https://github.com/YasinSonmez/certified-roa-fvi"
+
+[tool.setuptools]
+packages = ["fast_taylor_verifier"]
+
+[tool.setuptools.package-data]
+fast_taylor_verifier = ["*.cu", "*.cuh"]
